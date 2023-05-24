@@ -1,24 +1,28 @@
 <?php
-  echo("Hello Php");
-  echo '<br>';
-  $Nme = '<h2>emmnuel</h2>';
 
-  Echo $Nme;
+use function PHPSTORM_META\map;
+use function PHPSTORM_META\type;
 
-  $firstNme = 'emmnuel';
+echo ("Hello Php");
+echo '<br>';
+$Nme = '<h2>emmnuel</h2>';
 
-  define("publisher", "STYLES");
-  echo publisher;
+echo $Nme;
 
-  // Types In php 
+$firstNme = 'emmnuel';
+
+define("publisher", "STYLES");
+echo publisher;
+
+// Types In php 
 // interger 
-// floting-Point Numbers 
-// Strings 
+// floting-Point Numbers  
+// Strings "" ''
 // Boolens
-// RRY
+// RRY 
 // Objects 
 // Resource 
-// Cllbck
+// Callback
 // Null 
 
 $speed = -2355;
@@ -38,16 +42,14 @@ echo 'Hello' . $strings;
 $Bool = true;
 $Booldog = false;
 
-if($Bool === true){
+if ($Bool === true) {
   echo '<br>';
-   echo 'I am true';
-}else{
+  echo 'I am true';
+} else {
   echo 'I am false';
-}
-
-{
+} {
   // $varible = 'Joshua';
-  define('Variable','Josha'); 
+  define('Variable', 'Josha');
 }
 
 $friends = 'Mick';
@@ -76,17 +78,69 @@ var_dump($Books);
 echo '<br>';
 echo '<br>';
 
-$person = array("name" => 'Philip');
+$person = array("name" => 'Philip',   'Toilet' => 'Crpper');
 
 var_dump($person);
+var_dump($person['name']);
+
+// php data supports object-oriented programming (OOP). 
+
+//  class is a definition of a structure that contains properties 
+//  variables and methods (functions) classes are defined with the class 
+//  keyword.
+
+class Person{
+  public $Name = ''; 
+  public $age = ''; 
+
+  function name($newname = NULL){
+    if(!is_null($newname)){
+      $this->Name = $newname;
+    }
+
+    return $this->Name;
+  }
+}
 
 
+$ed = new Person;
+$ed->name('Henry');
 
 
+// $res = database_connect();
+// database_query();
 
+function myFunction(){
+  // do somethiing 
+} 
 
+function callback(){
+  myFunction();
+}
 
+$items = [];
 
+// $items.map(function(res, ){
   
+// }); exp callback function
 
- 
+$callback = function(){
+  echo "callback achieved";
+};
+
+call_user_func($callback);
+
+
+// $alph = 'beta';
+$alph = null;
+// $alph = Null;
+// $alph = NULL;
+
+// var_dump(type($alph)); come back to it 
+
+// Study Require nd Require_once nd include nd include_once 
+
+
+
+
+
